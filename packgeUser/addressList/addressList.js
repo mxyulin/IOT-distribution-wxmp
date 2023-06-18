@@ -1,22 +1,11 @@
-// packgeUser/selectAddress/selectAddress.js
+// packgeUser/address/address.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        currentItem: null,
-        addrList: [
-            {
-                id: '0'
-            },
-            {
-                id: '1'
-            },
-            {
-                id: '2'
-            },
-        ]
+        data: []
     },
 
     /**
@@ -73,5 +62,32 @@ Page({
      */
     onShareAppMessage() {
 
+    },
+
+    // 编辑地址
+    editAddr(e) {
+        let addrId = e.target.dataset.id;
+
+        wx.navigateTo({
+            url: `/packgeUser/editAddress/editAddress?id=${addrId}&type=edit`,
+            success: (result) => {
+
+            },
+            fail: () => { },
+            complete: () => { }
+        });
+
+    },
+
+    // 添加地址
+    addAddr() {
+        wx.navigateTo({
+            url: `/packgeUser/editAddress/editAddress?type=add`,
+            success: res => {
+
+            },
+            fail: () => { },
+            complete: () => { }
+        })
     }
 })

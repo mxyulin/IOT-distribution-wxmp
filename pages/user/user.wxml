@@ -72,8 +72,8 @@
     </view>
     <van-grid border="{{false}}">
       <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-prefix="iconfont alicon" icon="goods" text="商品信息" />
-      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="upgrade" text="上传收款码" />
-      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="qr" text="我的二维码" />
+      <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="upgrade" text="上传收款码" /> -->
+      <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="qr" text="我的二维码" /> -->
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="location-o" text="管理地址" /> -->
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="photo-o" text="文字" /> -->
     </van-grid>

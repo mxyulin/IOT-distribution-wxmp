@@ -7,15 +7,19 @@ Page({
      * 页面的初始数据
      */
     data: {
-        // themeColor: appInst.globalData.themeColor,
-        // canUseHeight: (appInst.getPageCanuseHeight() - 44 + 'px'),// 这里减的是标签选项卡高度 44 
+        orderList: [{}, {}],
+        tabsSafeHeight: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        let pageSafeHeight = (this.data._mix_pageSafeHeight - 44) + 'px';
 
+        this.setData({
+            tabsSafeHeight: pageSafeHeight
+        })
     },
 
     /**

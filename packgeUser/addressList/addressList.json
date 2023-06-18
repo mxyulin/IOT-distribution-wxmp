@@ -1,7 +1,6 @@
 {
-    "navigationBarTitleText": "选择地址",
+    "navigationBarTitleText": "收货地址",
     "usingComponents": {
-        "van-radio": "@vant/weapp/radio/index",
         "yulin-submit-bar-1btns": "/components/yulin-submit-bar-1btns/yulin-submit-bar-1btns"
     }
 }
