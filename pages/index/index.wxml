@@ -60,7 +60,7 @@
         </view>
     </view>
     <!-- 商品标签页 -->
-    <van-tabs color="{{ _mix_themeColor }}" title-active-color="{{ _mix_themeColor }}" line-height="" sticky animated swipeable>
+    <van-tabs color="{{ _mix_themeColor }}" title-active-color="{{ _mix_themeColor }}" sticky animated swipeable>
         <van-tab title="爆款推荐">
             <view wx:if="{{ goodsList['length'] }}" class="v-p-t-20 v-p-l-20 v-p-r-20 v-flex v-flex-wrap v-row-between v-col-top" style="min-height: {{ tabsSafeHeight }}; margin-bottom: 120rpx" hover-class="none" >
                 <yulin-goods-card wx:for="{{ goodsList }}" wx:key="*this" goodsId="{{ item.id }}" title="{{ item.goods_name }}" brandName="{{ item.firm[0].firm }}" price="{{ item.selling_price }}"></yulin-goods-card>

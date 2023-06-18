@@ -43,7 +43,7 @@
       <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="paid" text="待付款" url="/packgeGoods/orderList/orderList" />
       <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="logistics" text="待发货" url="/packgeGoods/orderList/orderList" />
       <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="send-gift-o" text="待收货" url="/packgeGoods/orderList/orderList" />
-      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="todo-list-o" text="售后" url="" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="todo-list-o" text="售后" url="/packgeGoods/afterSell/afterSell" />
     </van-grid>
   </view>
   <!-- 分利订单 -->
@@ -71,7 +71,7 @@
       <!-- <view class="v-font-xl v-type-info" hover-class="none" >全部<van-icon name="arrow" /></view> -->
     </view>
     <van-grid border="{{false}}">
-      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-prefix="iconfont alicon" icon="goods" text="商品信息" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-prefix="iconfont alicon" icon="goods" text="商品信息" url=""/>
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="upgrade" text="上传收款码" /> -->
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="qr" text="我的二维码" /> -->
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="location-o" text="管理地址" /> -->

@@ -13,13 +13,20 @@
 .no-bg-view {
   background-color: transparent !important;
   border: none;
-  padding: 0;
-  margin: 0;
+  // padding: 0;
+  // margin: 0;
 }
 
 .v-primary-linear-button {
   color: #fff !important;
   background: linear-gradient(to right, $v-type-primary, $v-type-primary-deep-dark) !important;
+}
+
+// 2023年06月05日 14:55:03 添加单行文本溢出处理
+.single-line-hidden {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 // v-td, v-th {

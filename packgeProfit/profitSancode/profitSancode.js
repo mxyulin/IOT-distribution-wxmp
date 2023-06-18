@@ -98,6 +98,7 @@ Page({
     },
 
     goodsBind() {
+        return;
         let qrcode = this.data.qrcode;
 
         // ! 含测试演示代码

@@ -1,5 +1,7 @@
 {
-    "navigationBarTitleText": "码利润",
+    "navigationBarTitleText": "扫码结果",
     "usingComponents": {
+        "van-tag": "@vant/weapp/tag/index",
+        "yulin-submit-bar": "/components/yulin-submit-bar/yulin-submit-bar"
     }
 }

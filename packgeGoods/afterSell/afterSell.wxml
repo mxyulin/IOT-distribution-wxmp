@@ -1,4 +1,4 @@
-<!-- packge-goods/order-list/order-list.wxml -->
+<!--packgeGoods/afterSell/afterSell.wxml-->
 <view class="container">
 	<van-tabs
 	 color="{{_mix_themeColor}}"
@@ -21,7 +21,7 @@
 				<van-empty image="/static/images/common/no_data_available.svg" description="暂无数据~" />
 			</view>
 		</van-tab>
-		<van-tab title="待付款({{0}})">
+		<van-tab title="待审核({{0}})">
 			<view
 			 wx:if="{{ false }}"
 			 class="v-p-20 v-flex-col v-row-left"
@@ -34,7 +34,7 @@
 				<van-empty image="/static/images/common/no_data_available.svg" description="暂无数据~" />
 			</view>
 		</van-tab>
-		<van-tab title="待发货({{3}})">
+		<van-tab title="待退款({{3}})">
 			<view
 			 wx:if="{{ orderList['length'] }}"
 			 class="v-p-20 v-flex-col v-row-left"
@@ -47,7 +47,7 @@
 				<van-empty image="/static/images/common/no_data_available.svg" description="暂无数据~" />
 			</view>
 		</van-tab>
-		<van-tab title="待收货({{3}})">
+		<van-tab title="已退款({{3}})">
 			<view
 			 wx:if="{{ orderList['length'] }}"
 			 class="v-p-20 v-flex-col v-row-left"
@@ -62,3 +62,4 @@
 		</van-tab>
 	</van-tabs>
 </view>
+

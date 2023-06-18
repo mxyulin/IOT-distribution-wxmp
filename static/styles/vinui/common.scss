@@ -64,13 +64,6 @@ text {
 	display: block !important;
 }
 
-// 2023年06月05日 14:55:03 添加单行文本溢出处理
-.single-line-hidden {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
 .v-flex {
 	display: flex;
 	flex-direction: row;

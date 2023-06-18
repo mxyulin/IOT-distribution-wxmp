@@ -29,7 +29,8 @@
                 "order/order",
                 "goodsDetail/goodsDetail",
                 "orderList/orderList",
-                "orderDetail/orderDetail"
+                "orderDetail/orderDetail",
+                "afterSell/afterSell"
             ]
         },
         {

@@ -1,4 +1,4 @@
-// packge-goods/order-list/order-list.js
+// packgeGoods/afterSell/afterSell.js
 const appInst = getApp();
 
 Page({

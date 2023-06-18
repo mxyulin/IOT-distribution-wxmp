@@ -1,32 +1,62 @@
 <!-- packgeProfit/profitSancode/profitSancode.wxml -->
-<!--  -->
-<view class="container v-p-20 v-flex-col v-row-left" style="height: {{ _mix_pageSafeHeight }}px">
-	<view class="v-flex-2 v-flex-col v-row-left v-col-center">
-    商品类型：{{ type }}
-		<view>
-			商品简介信息
+<view class="container v-flex-col v-row-left" style="height: {{ _mix_pageSafeHeight }}px">
+		<!-- 商品信息 -->
+		<view class="goods-info">
+				<swiper style="height: 400rpx" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay current="0" current-item-id="" interval="5000" duration="1000" circular bindchange="" bindanimationfinish="">
+						<swiper-item class="" item-id="">
+								<van-image width="100%" height="100%" lazy-load src="" />
+						</swiper-item>
+						<swiper-item class="" item-id="">
+								<van-image width="100%" height="100%" lazy-load src="" />
+						</swiper-item>
+						<swiper-item class="" item-id="">
+								<van-image width="100%" height="100%" lazy-load src="" />
+						</swiper-item>
+				</swiper>
+				<!-- 信息 -->
+				<view class="v-p-40 v-flex v-flex-nowrap v-row-between">
+						<view class="v-flex-1 single-line-hidden">
+								<view class="v-font-xl v-font-bold v-main-color">方萝卜五子棋机器人</view>
+								<view class="v-m-t-10 v-font-md v-type-info">FW-SSB071</view>
+								<view class="v-m-t-10 v-font-md  bg-primary v-type-primary-dark v-p">主人：会说话的狐狸</view>
+						</view>
+						<!-- 状态灯 -->
+						<view class="v-flex-1 v-flex v-row-right">
+								<view class="status-light status-active v-font-xl">已认主</view>
+						</view>
+				</view>
 		</view>
-		<view>
-			商品防伪信息
+		<!-- 分利信息 -->
+		<view class="profit-info v-p-40 v-m-t-20">
+				<view class="v-font-md">
+						购入价：
+						<text class="v-type-primary-dark">￥123.00</text>
+				</view>
+				<view class="v-font-md v-m-t-10">
+						分利率：
+						<text class="v-type-error-dark">当前价格*10%</text>
+				</view>
 		</view>
-	</view>
-	<view class="v-flex-3">
-		<van-button
-		 block
-		 round
-		 custom-class="v-primary-linear-button v-m-b-30"
-		 bindtap="goodsBind"
-		>
-			商品认主
-		</van-button>
-		<van-button
-		 block
-		 round
-		 custom-class="v-primary-linear-button"
-		 bindtap="buyAgain"
-		>
-			再次购买
-		</van-button>
-	</view>
+		<!-- 标签 -->
+		<view class="tags v-p-l-40 v-p-r-40 v-p-t-40 v-p-b-20 v-m-t-20">
+				<van-tag custom-class="v-m-b-20 v-m-r-5" size="large" color="#a0cfff" text-color="#fff">
+						品质保证
+				</van-tag>
+				<van-tag custom-class="v-m-b-20 v-m-r-5" size="large" color="#a0cfff" text-color="#fff">
+						以旧换新
+				</van-tag>
+				<van-tag custom-class="v-m-b-20 v-m-r-5" size="large" color="#a0cfff" text-color="#fff">
+						环保保证
+				</van-tag>
+				<!-- <van-tag custom-class="v-m-b-20 v-m-r-5" size="large" color="#a0cfff" text-color="#fff">品质保证</van-tag> -->
+				<!-- <van-tag custom-class="v-m-b-20 v-m-r-5" size="large" color="#a0cfff" text-color="#fff">品质保证</van-tag> -->
+		</view>
 </view>
-
+<yulin-submit-bar multiple safeArea="{{ isIphoneX }}">
+		<view slot="left" style="width: 100%">
+				<van-button block squre custom-class="" color="#fa3534" bindtap="goodsBind">我要购买</van-button>
+		</view>
+		<view slot="right" style="width: 100%">
+				<van-button block squre custom-class="" color="{{ _mix_themeColor }}" bindtap="goodsBind">商品认主</van-button>
+		</view>
+</yulin-submit-bar>
