@@ -1,0 +1,20 @@
+/* packgeUser/selectAddress/selectAddress.wxss */
+
+@import '../../static/styles/theme.scss';
+
+.full-width {
+  width: 100%;
+}
+
+.address-wrapper {
+  border: none;
+  width: 100%;
+  // width: 80%;
+  height: 150rpx;
+  background: #fff;
+}
+
+.address-wrapper-active {
+  // outline: 1px solid $v-type-primary;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

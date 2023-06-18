@@ -5,14 +5,19 @@ Page({
      * 页面的初始数据
      */
     data: {
-        data: []
+        type: '',// 业务类型 view/selection
+        addressList: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        let type = options.type;
 
+        (type == 'selection') && wx.setNavigationBarTitle({
+          title: '选择地址',
+        });
     },
 
     /**
@@ -89,5 +94,8 @@ Page({
             fail: () => { },
             complete: () => { }
         })
-    }
+    },
+
+    // 选择地址
+    selectAddr() {}
 })

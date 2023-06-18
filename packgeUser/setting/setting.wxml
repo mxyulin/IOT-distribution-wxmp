@@ -1,20 +1,59 @@
 <!-- packgeUser/setting/setting.wxml -->
-<view class="container" hover-class="none" >
-  <view class="v-m-t-20" hover-class="none" >
-    <van-cell title="个人信息" value="张三" url="/packgeUser/userInfo/userInfo" link-type="navigateTo" is-link />
-    <van-cell title="地址管理" value="新增/修改地址" url="/packgeUser/addressList/addressList" link-type="navigateTo" is-link />
-  </view>
-  <view class="v-m-t-20" hover-class="none" >
-    <van-cell title="隐私政策" url="/packgeUser" link-type="navigateTo" is-link />
-    <van-cell title="用户注册服务协议" url="/packgeUser" link-type="navigateTo" is-link />
-    <van-cell title="个人信息收集清单" url="/packgeUser" link-type="navigateTo" is-link />
-  </view>
-  <view class="v-m-t-20" hover-class="none" >
-    <van-cell title="关于我们" url="/packgeUser" link-type="navigateTo" is-link />
-  </view>
-  <view class="v-m-t-80 v-p-l-30 v-p-r-30" hover-class="none" >
-    <van-button custom-style="margin-bottom: 30rpx;" block color="linear-gradient(to right, #4591ef, #6149f6)" open-type="{{openType}}" bindtap="">
-      退出登陆
-    </van-button>
-  </view>
+<view class="container" hover-class="none">
+	<view class="v-m-t-20" hover-class="none">
+		<van-cell
+		 title="个人信息"
+		 value="张三"
+		 url="/packgeUser/userInfo/userInfo"
+		 link-type="navigateTo"
+		 is-link
+		/>
+		<van-cell
+		 title="地址管理"
+		 value="新增/修改地址"
+		 url="/packgeUser/addressList/addressList?type=view"
+		 link-type="navigateTo"
+		 is-link
+		/>
+	</view>
+	<view class="v-m-t-20" hover-class="none">
+		<van-cell
+		 title="隐私政策"
+		 url="/packgeUser"
+		 link-type="navigateTo"
+		 is-link
+		/>
+		<van-cell
+		 title="用户注册服务协议"
+		 url="/packgeUser"
+		 link-type="navigateTo"
+		 is-link
+		/>
+		<van-cell
+		 title="个人信息收集清单"
+		 url="/packgeUser"
+		 link-type="navigateTo"
+		 is-link
+		/>
+	</view>
+	<view class="v-m-t-20" hover-class="none">
+		<van-cell
+		 title="关于我们"
+		 url="/packgeUser"
+		 link-type="navigateTo"
+		 is-link
+		/>
+	</view>
+	<view class="v-m-t-80 v-p-l-30 v-p-r-30" hover-class="none">
+		<van-button
+		 custom-style="margin-bottom: 30rpx;"
+		 block
+		 color="linear-gradient(to right, #4591ef, #6149f6)"
+		 open-type="{{openType}}"
+		 bindtap=""
+		>
+			退出登陆
+		</van-button>
+	</view>
 </view>
+

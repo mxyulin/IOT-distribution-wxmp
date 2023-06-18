@@ -151,7 +151,7 @@ Page({
     // 跳转选择地址
     jumpToAddrList() {
         wx.navigateTo({
-            url: '/packgeUser/selectAddress/selectAddress',
+            url: `/packgeUser/selectAddress/selectAddress`,
         })
     }
 })
