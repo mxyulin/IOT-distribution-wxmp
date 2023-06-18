@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "商品详情",
+    "usingComponents": {
+        "van-stepper": "@vant/weapp/stepper/index",
+        "yulin-submit-bar-2btns": "/components/yulin-submit-bar-2btns/yulin-submit-bar-2btns"
+    }
+}

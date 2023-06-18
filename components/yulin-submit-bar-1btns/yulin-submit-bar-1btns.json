@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "yulin-submit-bar": "/components/yulin-submit-bar/yulin-submit-bar"
+    }
+}

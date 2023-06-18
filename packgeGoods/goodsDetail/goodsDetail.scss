@@ -1,0 +1,28 @@
+/* pages/goods-detail/goods-detail.wxss */
+
+@import '../../static/styles/theme.scss';
+
+// .caontainer {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.banner {
+  height: 600rpx;
+}
+
+.title {
+  width: 100%;
+  height: auto;
+  line-height: 60rpx;
+}
+
+// 样式覆盖
+.van-stepper--round .van-stepper__plus {
+  background-color: $v-type-error !important;
+}
+
+.van-stepper--round .van-stepper__minus {
+  border: 1px solid $v-type-error !important;
+  color: $v-type-error !important;
+}

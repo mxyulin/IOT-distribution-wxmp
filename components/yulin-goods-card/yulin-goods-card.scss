@@ -1,0 +1,29 @@
+/* components/goods-card/goods-card.scss */
+
+@import '../../static/styles/index.scss';
+
+.container {
+  width: 350rpx;
+  height: 520rpx;
+  border: none;
+  // box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  display: inline-block;
+  margin-bottom: 12rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  -webkit-border-radius: 15rpx;
+  -moz-border-radius: 15rpx;
+  -ms-border-radius: 15rpx;
+  -o-border-radius: 15rpx;
+}
+
+.image-wrapper {
+  width: 350rpx;
+  height: 330rpx;
+  border: none;
+  border-radius: 5rpx;
+  -webkit-border-radius: 5rpx;
+  -moz-border-radius: 5rpx;
+  -ms-border-radius: 5rpx;
+  -o-border-radius: 5rpx;
+}

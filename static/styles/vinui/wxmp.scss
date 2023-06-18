@@ -1,0 +1,57 @@
+/* 处理和微调微信原生组件样式 */
+@import '../theme.scss';
+
+.round-view {
+  border: none;
+  border-radius: 15rpx;
+  -webkit-border-radius: 15rpx;
+  -moz-border-radius: 15rpx;
+  -ms-border-radius: 15rpx;
+  -o-border-radius: 15rpx;
+}
+
+.no-bg-view {
+  background-color: transparent !important;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.v-primary-linear-button {
+  color: #fff !important;
+  background: linear-gradient(to right, $v-type-primary, $v-type-primary-deep-dark) !important;
+}
+
+// v-td, v-th {
+// 	flex: 1;
+// 	align-self: stretch;
+// }
+
+// .v-td {
+// 	height: 100%;
+// }
+
+// v-icon {
+// 	display: inline-flex;
+// 	align-items: center;
+// }
+
+// // 各家小程序宫格组件外层设置为100%，避免受到父元素display: flex;的影响
+// v-grid {
+// 	width: 100%;
+// 	flex: 0 0 100%;
+// }
+
+// // 避免小程序线条组件因为父组件display: flex;而失效
+// v-line {
+// 	flex: 1;
+// }
+
+// v-switch {
+// 	display: inline-flex;
+// 	align-items: center;
+// }
+
+// v-dropdown {
+// 	flex: 1;
+// }

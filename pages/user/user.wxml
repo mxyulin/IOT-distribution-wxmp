@@ -1,0 +1,81 @@
+<!-- pages/user/user.wxml -->
+<view class="container" hover-class="none" >
+  <!-- 设置 -->
+  <view class="v-flex v-flex-nowrap v-row-right" hover-class="none" >
+    <navigator class="" target="" url="/packgeUser/setting/setting" hover-class="none" open-type="navigate">
+      <van-icon custom-class="v-type-info" class-prefix="iconfont alicon" name="setting" size="30" />
+    </navigator>
+  </view>
+  <!-- 用户信息 -->
+  <view class="userInfo v-flex v-felx-nowrap v-row-left v-col-center" hover-class="none" >
+    <view class="user-avater" hover-class="none" >
+      <van-image custom-class="" width="100%" height="100%" round lazy-load src="/static/images/user/avatar.507089ae.svg"></van-image>
+    </view>
+    <text class="v-font-30 v-font-bold v-m-l-20 v-main-color"   >您好，用户1223456</text>
+  </view>
+  <!-- 提现看板 -->
+  <view class="box-wrapper cash-board v-m-t-30 v-p-t-30 v-p-b-30 v-flex v-row-nowrap v-row-evenly">
+    <view class="v-font-md v-text-center">
+      <view class="v-m-b-10">待分利</view>
+      <text class="v-font-xl v-font-bold"   >￥123.00</text>          
+    </view>
+    <view class="v-font-md v-text-center">
+      <view class="v-m-b-10">已分利</view>
+      <text class="v-font-xl v-font-bold"   >￥123.00</text>          
+    </view>
+    <view class="v-font-md v-text-center">
+      <view class="v-m-b-10">可提现</view>
+      <text class="v-font-xl v-font-bold"   >￥123.00</text>          
+    </view>
+  </view>
+  <!-- 我的订单 -->
+  <view class="box-wrapper v-m-t-30 v-p-30" hover-class="none" >
+    <view class="v-flex v-flex-nowrap v-row-between v-m-b-35" hover-class="none" >
+      <text class="v-font-xl v-font-bold v-main-color"   >我的订单</text>
+      <view class="v-font-xl v-type-info" hover-class="none" >
+        <navigator class="" target="" url="/packgeGoods/orderList/orderList" hover-class="none" open-type="navigate">
+          全部
+          <van-icon name="arrow" />
+        </navigator>
+      </view>
+    </view>
+    <van-grid border="{{false}}">
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="paid" text="待付款" url="/packgeGoods/orderList/orderList" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="logistics" text="待发货" url="/packgeGoods/orderList/orderList" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="send-gift-o" text="待收货" url="/packgeGoods/orderList/orderList" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="todo-list-o" text="售后" url="" />
+    </van-grid>
+  </view>
+  <!-- 分利订单 -->
+  <view class="box-wrapper v-m-t-30 v-p-30" hover-class="none" >
+    <view class="v-flex v-flex-nowrap v-row-between v-m-b-35" hover-class="none" >
+      <text class="v-font-xl v-font-bold v-main-color"   >分利订单</text>
+      <view class="v-font-xl v-type-info">
+        <navigator class="" target="" url="/packgeProfit/profitList/profitList" hover-class="none" open-type="navigate">
+          全部
+          <van-icon name="arrow" />
+        </navigator>
+      </view>
+    </view>
+    <van-grid border="{{false}}">
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="after-sale" text="待分利" url="/packgeProfit/profitList/profitList" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="refund-o" text="可分利" url="/packgeProfit/profitList/profitList" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="cash-back-record" text="已分利" url="/packgeProfit/profitList/profitList" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-class="v-type-primary" icon="gold-coin-o" text="分利提现" url="/packgeProfit/profitCash/profitCash" />
+    </van-grid>
+  </view>
+  <!-- 我的认主 -->
+  <view class="box-wrapper v-m-t-30 v-p-30" hover-class="none" >
+    <view class="v-flex v-flex-nowrap v-row-between v-m-b-35" hover-class="none" >
+      <text class="v-font-xl v-font-bold v-main-color"   >我的认主</text>
+      <!-- <view class="v-font-xl v-type-info" hover-class="none" >全部<van-icon name="arrow" /></view> -->
+    </view>
+    <van-grid border="{{false}}">
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-prefix="iconfont alicon" icon="goods" text="商品信息" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="upgrade" text="上传收款码" />
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="qr" text="我的二维码" />
+      <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="location-o" text="管理地址" /> -->
+      <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="photo-o" text="文字" /> -->
+    </van-grid>
+  </view>
+</view>

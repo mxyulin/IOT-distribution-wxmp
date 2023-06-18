@@ -1,0 +1,49 @@
+<!-- packgeProfit/profitDetail/profitDetail.wxml -->
+<view class="container v-m-b-50">
+  <!-- 订单状态 -->
+  <view class="order-status v-flex v-flex-nowrap v-row-between">
+    <view class="v-font-xl v-p-25 v-type-info-light">
+      <van-icon size="1em" class-prefix="iconfont alicon" name="time-circle"></van-icon>
+      待买家收货~
+    </view>
+    <view class="v-font-xl v-p-25 v-type-info-light">剩余：{{}}</view>
+  </view>
+  <!-- 商品信息 -->
+  <view class="goods-card v-m-t-20 v-p-20 v-flex v-flex-nowrap v-row-start">
+    <view class="goods-image">
+      <van-image width="100%" height="100%" fit="aspectFit" src="{{ goodsImg }}" />
+    </view>
+    <van-tag mark color="{{ _mix_themeColor }}" class="goods-tag">{{ goodsTag }}</van-tag>
+    <view class="goods-info v-p-l-20">
+      <view class="v-font-xs single-line-hidden v-main-color" style="width: 30%">
+        {{ goodsTitle }}
+      </view>
+      <view class="v-font-xs single-line-hidden v-type-info">{{ goodsDetail }}</view>
+      <view class="v-font-md v-flex v-row-between v-row-nowrap">
+        <text class="v-font-bold v-type-error"   >
+          ￥{{ goodsPrice }}
+        </text>
+        <text class="v-main-color"   >
+          x {{ goodsNum }}
+        </text>
+      </view>
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class="order-info">
+    <van-cell-group title="基本信息">
+      <van-cell title="买家" value="{{}}" />
+      <van-cell title="手机号" value="{{}}" />
+      <van-cell title="订单编号" value="{{}}" />
+      <van-cell title="下单时间" value="{{}}" />
+    </van-cell-group>
+    <van-cell-group title="分利信息">
+      <van-cell title="分利人" value="{{}}" />
+      <van-cell title="分利二维码"/>
+      <van-cell title="分利百分比" value="{{'10%'}}" />
+      <van-cell title="分利金额">
+        <view class="v-font-xl v-type-error">{{'￥123.00'}}</view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+</view>

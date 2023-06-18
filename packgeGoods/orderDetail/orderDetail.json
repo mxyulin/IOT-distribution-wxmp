@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "订单详情",
+    "usingComponents": {
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-steps": "@vant/weapp/steps/index"
+    }
+}

@@ -1,0 +1,10 @@
+@import './static/styles/theme.scss';// 所有主题色变量
+@import './static/styles/index.scss';// vin 样式库
+@import './static/fonts/alicon/iconfont.scss';// 字体库
+
+page {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: $v-bg-color;
+}

@@ -1,0 +1,78 @@
+{
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-image": "@vant/weapp/image/index"
+    },
+    "entryPagePath": "pages/index/index",
+    "pages": [
+        "pages/index/index",
+        "pages/user/user"
+    ],
+    "subpackages": [
+        {
+            "root": "packgeUser",
+            "name": "user",
+            "pages": [
+                "login/login",
+                "addressList/addressList",
+                "setting/setting",
+                "userInfo/userInfo",
+                "editAddress/editAddress",
+                "selectAddress/selectAddress"
+            ]
+        },
+        {
+            "root": "packgeGoods",
+            "name": "goods",
+            "pages": [
+                "order/order",
+                "goodsDetail/goodsDetail",
+                "orderList/orderList",
+                "orderDetail/orderDetail"
+            ]
+        },
+        {
+            "root": "packgeProfit",
+            "name": "profit",
+            "pages": [
+                "profitCash/profitCash",
+                "profitDetail/profitDetail",
+                "profitList/profitList",
+                "profitSancode/profitSancode",
+                "profitGoodsBind/profitGoodsBind"
+            ]
+        }
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#4591ef",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "物联云码",
+        "backgroundColor": "#f5f5f5"
+    },
+    "tabBar": {
+        "custom": true,
+        "color": "#7A7E83",
+        "selectedColor": "#4591ef",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "/static/images/custom-tabbar/home_un.png",
+                "selectedIconPath": "static/images/custom-tabbar/home_ac.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "iconPath": "/static/images/custom-tabbar/usr_un.png",
+                "selectedIconPath": "static/images/custom-tabbar/usr_ac.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "resolveAlias": {
+        "@/*": "/*"
+    },
+    "sitemapLocation": "sitemap.json"
+}

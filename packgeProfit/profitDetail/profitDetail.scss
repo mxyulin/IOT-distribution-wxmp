@@ -1,0 +1,31 @@
+/* packgeProfit/profitDetail/profitDetail.wxss */
+
+@import '../../static/styles/theme.scss';
+
+.order-status {
+  width: 100%;
+  height: 100rpx;
+  background: linear-gradient(to right top, $v-type-primary-dark, $v-type-primary-deep-dark);
+}
+
+.goods-card {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #fff;
+}
+
+.goods-image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.goods-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.goods-info {
+  width: 85%;
+}

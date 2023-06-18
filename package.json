@@ -1,0 +1,17 @@
+{
+  "name": "auth0.6",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/area-data": "^1.4.1",
+    "@vant/weapp": "^1.10.19",
+    "area-data": "^5.0.6"
+  }
+}

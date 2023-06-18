@@ -1,0 +1,27 @@
+<view class="container">
+    <view class="logo-wrapper" hover-class="none" >
+        <image class="logo-img" src="/static/images/logo.png" mode="aspectFit|aspectFill|widthFix" lazy-load="{{ false }}" binderror="" bindload=""></image>
+        <!-- <text class="logo-title"   >物联云码</text> -->
+    </view>
+    <view class="button-wrapper">
+        <!-- <van-button custom-style="margin-bottom: 30rpx;" block color="linear-gradient(to right, #4591ef, #6149f6)" open-type="{{ openType }}" bindgetphonenumber="wechatLogin" bindtap="wechatLogin">
+            微信登陆
+        </van-button> -->
+        <van-button custom-style="margin-bottom: 30rpx;" block color="linear-gradient(to right, #4591ef, #6149f6)" bindtap="wechatLogin">
+            微信登陆
+        </van-button>
+        <van-button custom-style="margin-bottom: 100rpx;" block class="">手机号登陆/注册</van-button>
+    </view>
+    <view class="protocol-wrapper" hover-class="none" >
+        <van-checkbox name="" icon-size="20" value="{{ isAgree }}" label-disabled bind:change="onAgreeChange">
+            登陆代表您已同意
+            <navigator class="protocol" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                物联云码用户协议
+            </navigator>
+            、
+            <navigator class="protocol" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                隐私协议
+            </navigator>
+        </van-checkbox>
+    </view>
+</view>

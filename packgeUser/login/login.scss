@@ -1,0 +1,37 @@
+@import '../../static/styles/theme.scss';
+@import '../../static/styles/index.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-wrapper {
+    padding: 100rpx 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    width: 300rpx;
+    height: 300rpx;
+}
+
+.button-wrapper {
+    padding: 0 20rpx;
+}
+
+.protocol-wrapper {
+    margin: 0 auto;
+    font-size: 25rpx;
+}
+
+.protocol {
+    display: inline;
+    color: $v-type-primary;
+}

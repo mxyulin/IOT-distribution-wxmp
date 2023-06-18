@@ -1,0 +1,32 @@
+<!-- packgeProfit/profitSancode/profitSancode.wxml -->
+<!--  -->
+<view class="container v-p-20 v-flex-col v-row-left" style="height: {{ _mix_pageSafeHeight }}px">
+	<view class="v-flex-2 v-flex-col v-row-left v-col-center">
+    商品类型：{{ type }}
+		<view>
+			商品简介信息
+		</view>
+		<view>
+			商品防伪信息
+		</view>
+	</view>
+	<view class="v-flex-3">
+		<van-button
+		 block
+		 round
+		 custom-class="v-primary-linear-button v-m-b-30"
+		 bindtap="goodsBind"
+		>
+			商品认主
+		</van-button>
+		<van-button
+		 block
+		 round
+		 custom-class="v-primary-linear-button"
+		 bindtap="buyAgain"
+		>
+			再次购买
+		</van-button>
+	</view>
+</view>
+

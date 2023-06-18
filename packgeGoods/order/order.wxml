@@ -1,0 +1,59 @@
+<!-- pages/order/order.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="{{false}}">
+	<!-- 地址栏 -->
+	<view class="address-wrapper v-m-t-20 v-p-30 v-main-color" hover-class="none" hover-stop-propagation="{{false}}" bind:tap="jumpToAddrList">
+		<view class="v-flex v-row-between" hover-class="none" hover-stop-propagation="{{false}}">
+			<view>
+				<van-icon size="1em" name="location-o" />
+				收货人：{{"张三"}} {{"137*****4768"}}
+			</view>
+			<van-icon name="arrow" />
+		</view>
+		<view class="v-m-t-10 single-line-hidden" hover-class="none" hover-stop-propagation="{{false}}">
+			江苏省 无锡市新吴区XXX路129号
+		</view>
+		<!-- <view class="v-m-t-10" hover-class="none" hover-stop-propagation="{{false}}">
+      请填写收货人信息
+    </view> -->
+	</view>
+	<!-- 商品卡片 -->
+	<view class="goods-box v-m-t-20" hover-class="none" hover-stop-propagation="{{ false }}">
+		<van-card
+		 custom-class="goods-card"
+		 desc-class="single-line-hidden"
+		 num="{{ num }}"
+		 tag="标签"
+		 price="{{ price }}"
+		 title="{{ title }}"
+		 desc="{{ summary }}"
+		 thumb="{{ image }}"
+		/>
+	</view>
+	<!-- 订单信息 -->
+	<view class="order-info-wrapper v-m-t-20" hover-class="none" hover-stop-propagation="{{false}}">
+		<!-- <van-cell title="下单联系人" is-link value="张三" required bind:tap="showPopup" />
+    <van-cell title="配送方式" is-link value="顺丰标快（原顺丰经济）" required /> -->
+		<!-- <van-cell title="发票信息" is-link value="内容" /> -->
+		<van-field
+		 label="订单备注"
+		 value="{{ orderNotes }}"
+		 placeholder="如有特殊需求，请备注"
+		 border="{{ false }}"
+		 bind:change="onChange"
+		/>
+	</view>
+	<!-- 订单金额 -->
+	<view class="total-amount-wrapper v-m-t-20" hover-class="none" hover-stop-propagation="{{false}}">
+		<van-cell border="{{ false }}" title="商品金额" value="￥{{ goodsAmount }}" />
+		<van-cell border="{{ false }}" title="运费" value="￥{{ freight }}" />
+	</view>
+	<!-- 提交按钮 -->
+	<yulin-submit-bar-2btns
+	 label="总金额"
+	 amount="{{ totalAmount }}"
+	 disabled="{{ disabled }}"
+	 submit-text="立即支付"
+	 bind:submit="onSubmit"
+	/>
+</view>
+

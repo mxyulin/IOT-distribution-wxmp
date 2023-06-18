@@ -1,0 +1,39 @@
+/* components/order-card/order-card.wxss */
+
+@import '../../static/styles/index.scss';
+
+.order-card {
+  width: 710rpx;
+  //// height: 300rpx; 改为动态
+  border: none;
+  margin-bottom: 15rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  -webkit-border-radius: 15rpx;
+  -moz-border-radius: 15rpx;
+  -ms-border-radius: 15rpx;
+  -o-border-radius: 15rpx;
+}
+
+.goods-card {
+  padding: 20rpx;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.goods-image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.goods-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.goods-info {
+  width: 85%;
+  padding-left: 20rpx;
+}

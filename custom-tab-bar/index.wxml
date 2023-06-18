@@ -1,0 +1,26 @@
+<view class="tabbar_box {{isIphoneX ? 'iphoneX-height' : ''}}" style="background-color:{{tabbar.backgroundColor}}">
+  <block wx:for="{{tabbar.list}}" wx:key="pagePath">
+    <!-- 特殊突起 tabbar -->
+    <!-- ! 页面需求tabbar勿删！ -->
+    <!-- <view wx:if="{{item.isSpecial == true}}" class="tabbar_nav" hover-class="none" style="color:{{tabbar.selectedColor}}" data-url="{{item.pagePath}}" bindtap="switchTabbar">
+      <view class='special-wrapper' data-url="{{item.pagePath}}">
+        <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}" data-url="{{item.pagePath}}"></image>
+      </view>
+      <image class='special-text-wrapper' data-url="{{item.pagePath}}"></image>
+      <text data-url="{{item.pagePath}}">{{item.text}}</text>
+    </view> -->
+    <!-- * 按钮需求tbbbar -->
+    <view wx:if="{{ item.isSpecial == true }}" class="tabbar_nav" hover-class="none" style="color:{{ tabbar.selectedColor }}" bindtap="scanCode">
+      <view class='special-wrapper' >
+        <image class="tabbar_icon" src="{{ item.iconPath }}" ></image>
+      </view>
+      <image class='special-text-wrapper' ></image>
+      <text >{{item.text}}</text>
+    </view>
+    <!-- 普通 tabbar -->
+    <view wx:else class="tabbar_nav" hover-class="none" style="color:{{item.selected ? tabbar.selectedColor : tabbar.color}}" open-type="switchTab" data-url="{{item.pagePath}}" bindtap="switchTabbar">
+      <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}" data-url="{{item.pagePath}}"></image>
+      <text data-url="{{item.pagePath}}">{{item.text}}</text>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,46 @@
+<!-- packgeProfit/profitGoodsBind/profitGoodsBind.wxml -->
+<view class="container">
+	<van-field
+	 value="{{ username }}"
+	 required
+	 label="字段名"
+	 placeholder="请输入"
+	/>
+	<van-field
+	 value="{{ username }}"
+	 required
+	 label="字段名"
+	 placeholder="请输入"
+	/>
+	<van-field
+	 value="{{ username }}"
+	 required
+	 label="字段名"
+	 placeholder="请输入"
+	/>
+	<van-field
+	 value="{{ username }}"
+	 required
+	 label="字段名"
+	 placeholder="请输入"
+	/>
+	<van-field
+	 value="{{ username }}"
+	 required
+	 label="字段名"
+	 placeholder="请输入"
+	/>
+	<view class="v-p-l-20 v-p-r-20 v-m-t-20">
+		<van-button
+		 block
+		 round
+		 disabled=""
+		 loading=""
+		 custom-class="v-primary-linear-button"
+		 bind:tap="onSubmit"
+		>
+			提交
+		</van-button>
+	</view>
+</view>
+

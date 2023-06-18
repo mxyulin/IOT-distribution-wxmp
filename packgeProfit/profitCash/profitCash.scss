@@ -1,0 +1,28 @@
+/* packgeProfit/profitCash/profitCash.wxss */
+
+@import '../../static/styles/theme.scss';
+
+.card-box {
+  width: 700rpx;
+  //// height: 300rpx; 改为动态
+  border: none;
+  margin-bottom: 15rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  -webkit-border-radius: 15rpx;
+  -moz-border-radius: 15rpx;
+  -ms-border-radius: 15rpx;
+  -o-border-radius: 15rpx;
+}
+
+.user-avater {
+  width: 100rpx;
+  height: 100rpx;
+  border: none;
+  background-color: $v-bg-color;
+  border-radius: 75rpx;
+  -webkit-border-radius: 75rpx;
+  -moz-border-radius: 75rpx;
+  -ms-border-radius: 75rpx;
+  -o-border-radius: 75rpx;
+}

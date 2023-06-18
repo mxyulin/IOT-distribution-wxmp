@@ -1,0 +1,8 @@
+<!-- packgeUser/userInfo/userInfo.wxml -->
+<view class="container" hover-class="none" >
+  <view class="v-m-t-20" hover-class="none" >
+    <van-cell title="昵称" value="张三" />
+    <van-cell title="姓名" value="张小明" />
+    <van-cell title="手机号码" value="132*****654" />
+  </view>
+</view>

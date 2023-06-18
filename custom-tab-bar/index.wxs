@@ -1,0 +1,25 @@
+/**
+ * 校验当前数组项是否为数组中间项
+ * @param {number} num 
+ * @param {number} len 
+ * @returns 
+ */
+var checkIfMedian = function (num, len) {
+  if (len % 2 === 0) { // 如果数组长度为偶数，返回 false
+    return false;
+  }
+
+  else { // 如果数组长度为奇数
+    var middleIndex = Math.floor(len / 2); // 获取中位数索引，向下取整
+
+    if (num === middleIndex + 1) { // 如果 num 是中位数，返回 true
+      return true;
+    } else { // 否则返回 false
+      return false;
+    }
+  }
+}
+
+module.exports = {
+  checkIfMedian: checkIfMedian
+}

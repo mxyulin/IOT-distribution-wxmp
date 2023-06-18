@@ -1,0 +1,115 @@
+<!-- packgeProfit/profitCash/profitCash.wxml -->
+<view class="container v-p-25">
+	<!--  -->
+	<view class="card-box v-font-xl v-main-color">
+		<view class="v-p-50 v-border-b-1 v-flex v-flex-nowrap v-row-between">
+			<view class="">可提现分利（元）</view>
+			<view class="v-font-bold v-type-error">￥{{ CanCashAmount }}</view>
+		</view>
+		<view class="v-p-50">
+			<van-field
+			 focus
+			 border="{{ false }}"
+			 value="{{ cashAmount }}"
+			 custom-style="padding: 0; font-size: 34rpx;"
+			 label-class="v-main-color"
+			 input-align="right"
+			 size="large"
+			 type="number"
+			 label="提现金额"
+			 placeholder="请输入要提现的金额"
+			 bind:click-icon="onClickIcon"
+			/>
+		</view>
+	</view>
+	<!--  -->
+	<view class="v-m-t-50 v-p-l-30 v-p-r-30 v-flex v-flex-nowrap v-row-between">
+		<van-checkbox
+		 icon-size="20"
+		 label-class="v-font-md v-type-info"
+		 value="{{ checked }}"
+		 bind:change="onChange"
+		>
+			提现所有分利
+		</van-checkbox>
+		<!-- <view class="v-font-md v-type-info">
+			最低提现金额为
+			<text class="v-type-error">100</text>
+			元
+		</view> -->
+	</view>
+	<!-- 提现方式 -->
+	<view class="card-box v-font-xl v-main-color v-m-t-50">
+		<view class="v-p-l-50 v-p-r-50 v-p-t-20 v-p-b-20 v-border-b-1 v-flex v-flex-nowrap v-row-between">
+			<view class="">提现方式</view>
+			<view class="" bind:tap="showAction">
+				<van-icon name="arrow" />
+				微信提现
+				<!-- {{ cashType['name'] }} -->
+			</view>
+		</view>
+		<!-- 微信账户预览 -->
+		<view class="v-p-50">
+			当前提现账户：
+			<view class="v-flex-col v-row-left v-col-center" hover-class="none">
+				<view class="user-avater" hover-class="none">
+					<van-image
+					 custom-class=""
+					 width="100%"
+					 height="100%"
+					 round
+					 lazy-load
+					 src="/static/images/user/avatar.507089ae.svg"
+					/>
+				</view>
+				<text class="v-m-t-30 v-font-30 v-font-bold v-m-l-20 v-type-money-color">用户1223456</text>
+			</view>
+
+		</view>
+		<!-- 支付宝账户表单 -->
+		<view wx:if="{{ false }}" class="v-p-50">
+			<van-field
+			 border="{{ false }}"
+			 value="{{ cashAmount }}"
+			 custom-style="padding: 0; font-size: 28rpx;"
+			 label-class="v-main-color"
+			 input-align="left"
+			 size="large"
+			 type="number"
+			 placeholder="请输入姓名"
+			 bind:click-icon="onClickIcon"
+			/>
+			<van-field
+			 border="{{ false }}"
+			 value="{{ cashAmount }}"
+			 custom-style="padding: 0; margin-top: 20rpx; font-size: 28rpx;"
+			 label-class="v-main-color"
+			 input-align="left"
+			 size="large"
+			 type="number"
+			 placeholder="请输入支付宝账号"
+			 bind:click-icon="onClickIcon"
+			/>
+		</view>
+		<!-- *暂不考虑支付宝提现 -->
+		<!-- <van-action-sheet
+		 show="{{ show }}"
+		 actions="{{ actions }}"
+		 bind:close="onClose"
+		 bind:select="onSelect"
+		/> -->
+	</view>
+	<view class="v-p-20" hover-class="none">
+		<van-button
+		 block
+		 round
+		 disabled=""
+		 loading=""
+		 custom-class="v-primary-linear-button"
+     bind:tap="onSubmit"
+		>
+			提交申请
+		</van-button>
+	</view>
+</view>
+

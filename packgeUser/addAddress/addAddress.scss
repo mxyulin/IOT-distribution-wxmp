@@ -1,0 +1,18 @@
+/* packgeUser/addAddress/addAddress.wxss */
+
+@import '../../static/styles/theme.scss';
+
+.van-picker__cancel {
+  color: $v-type-primary !important;
+  font-size: 35rpx !important;
+}
+
+.van-picker__confirm {
+  color: $v-type-primary !important;
+  font-size: 35rpx !important;
+}
+
+.area-content {
+  flex: 4 !important;
+  // text-align: left !important;
+}

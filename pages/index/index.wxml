@@ -1,0 +1,97 @@
+<!-- index.wxml -->
+<view class="container">
+    <!-- 轮播图 -->
+    <swiper class="banner" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay current="0" current-item-id="" interval="5000" duration="1000" circular bindchange="" bindanimationfinish="">
+        <swiper-item class="" item-id="">
+            <van-image width="100%" height="100%" lazy-load src="/static/images/banner/698ACAEB44F5AEFC68F1CD2692562016.jpg"></van-image>
+        </swiper-item>
+        <swiper-item class="" item-id="">
+            <van-image width="100%" height="100%" lazy-load src="/static/images/banner/698ACAEB44F5AEFC68F1CD2692562016.jpg"></van-image>
+        </swiper-item>
+        <swiper-item class="" item-id="">
+            <van-image width="100%" height="100%" lazy-load src="/static/images/banner/698ACAEB44F5AEFC68F1CD2692562016.jpg"></van-image>
+        </swiper-item>
+    </swiper>
+    <!-- 服务标签 -->
+    <view class="service-board" hover-class="none" >
+        <van-grid custom-class="no-bg-view" column-num="4">
+            <van-grid-item content-class="no-bg-view" text-class="v-font-xs" icon="photo-o" text="海量现货" />
+            <van-grid-item content-class="no-bg-view" text-class="v-font-xs" icon="photo-o" text="4小时发货" />
+            <van-grid-item content-class="no-bg-view" text-class="v-font-xs" icon="photo-o" text="正品保证" />
+            <van-grid-item content-class="no-bg-view" text-class="v-font-xs" icon="photo-o" text="省钱省心" />
+        </van-grid>
+    </view>
+    <!-- 公告板 -->
+    <view class="round-view notice-board" hover-class="none" >
+        <view class="v-p-t-10 v-p-b-10" hover-class="none" >
+            <van-notice-bar color="#303133" background="#fff" left-icon="volume-o" mode="link" text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。" />
+        </view>
+        <van-divider customStyle="border-color: #e4e7ed; margin: 0;" />
+        <view class="v-p-t-30 v-p-b-30 v-flex v-flex-nowrap" hover-class="none" >
+            <view class="v-inblock v-b-r-1" hover-class="none" >
+                <van-image custom-class="v-m-l-30 v-m-r-30" width="50" height="50" alt="数据看板" src="/static/images/index/datakanban.c2cb231f.svg" />
+            </view>
+            <view style="width: 78%;" class="v-flex v-flex-nowrap v-row-between v-m-l-30 v-m-r-30" hover-class="none" >
+                <view class="" hover-class="none" >
+                    <view class="v-inblock v-type-info v-font-md v-m-b-15">
+                        今日销量
+                    </view>
+                    <text class="v-main-color v-font-xl v-font-bold">
+                        123,321
+                    </text>
+                </view>
+                <view class="" hover-class="none" >
+                    <view class="v-inblock v-type-info v-font-md v-m-b-15">
+                        本月销量
+                    </view>
+                    <text class="v-main-color v-font-xl v-font-bold">
+                        123,321
+                    </text>
+                </view>
+                <view class="" hover-class="none" >
+                    <view class="v-inblock v-type-info v-font-md v-m-b-15">
+                        当年销量
+                    </view>
+                    <text class="v-main-color v-font-xl v-font-bold">
+                        123
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 商品标签页 -->
+    <van-tabs color="{{ _mix_themeColor }}" title-active-color="{{ _mix_themeColor }}" line-height="" sticky animated swipeable>
+        <van-tab title="爆款推荐">
+            <view wx:if="{{ goodsList['length'] }}" class="v-p-t-20 v-p-l-20 v-p-r-20 v-flex v-flex-wrap v-row-between v-col-top" style="min-height: {{ tabsSafeHeight }}; margin-bottom: 120rpx" hover-class="none" >
+                <yulin-goods-card wx:for="{{ goodsList }}" wx:key="*this" goodsId="{{ item.id }}" title="{{ item.goods_name }}" brandName="{{ item.firm[0].firm }}" price="{{ item.selling_price }}"></yulin-goods-card>
+            </view>
+            <view wx:else class="v-flex v-row-center v-col-center" style="min-height: {{ tabsSafeHeight }}">
+                <van-empty image="/static/images/common/no_data_available.svg" description="暂无数据~" />
+            </view>
+        </van-tab>
+        <van-tab title="优惠折扣">
+            <!-- <view wx:if="{{ goodsList['length'] }}" class="v-p-t-20 v-p-l-20 v-p-r-20 v-flex v-flex-wrap v-row-between v-col-top" style="min-height: {{ tabsSafeHeight }}; margin-bottom: 120rpx" hover-class="none" >
+                <goods-card></goods-card>
+            </view> -->
+            <view class="v-flex v-row-center v-col-center" style="min-height: {{ tabsSafeHeight }}">
+                <van-empty image="/static/images/common/no_data_available.svg" description="暂无数据~" />
+            </view>
+        </van-tab>
+        <!-- <van-tab title="清仓特卖">
+            <view wx:if="{{ goodsList['length'] }}" class="v-p-t-20 v-p-l-20 v-p-r-20 v-flex v-flex-wrap v-row-between v-col-top" style="min-height: {{ tabsSafeHeight }}; margin-bottom: 120rpx" hover-class="none" >
+                <goods-card></goods-card>
+            </view>
+            <view wx:else class="v-flex v-row-center v-col-center" style="min-height: {{ tabsSafeHeight }}">
+                <van-empty description="暂无数据" />
+            </view>
+        </van-tab> -->
+        <!-- <van-tab title="折扣专场">
+            <view wx:if="{{ goodsList['length'] }}" class="v-p-t-20 v-p-l-20 v-p-r-20 v-flex v-flex-wrap v-row-between v-col-top" style="min-height: {{ tabsSafeHeight }}; margin-bottom: 120rpx" hover-class="none" >
+                <goods-card></goods-card>
+            </view>
+            <view wx:else class="v-flex v-row-center v-col-center" style="min-height: {{ tabsSafeHeight }}">
+                <van-empty description="暂无数据" />
+            </view>
+        </van-tab> -->
+    </van-tabs>
+</view>

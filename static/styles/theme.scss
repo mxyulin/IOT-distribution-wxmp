@@ -1,0 +1,45 @@
+// 此文件为 vin-ui 的主题变量，这些变量目前只能通过 app.scss 引入才有效，另外由于
+// app.scss中引入的样式会同时混入到全局样式文件和单独每一个页面的样式中，造成微信程序包太大，
+// 故 app.scss 只建议放 scss 变量名相关样式，其他的样式可以通过 main.js 或者 app.js 引入
+
+$v-main-color: #303133;
+$v-content-color: #606266;
+$v-tips-color: #909399;
+$v-light-color: #c0c4cc;
+$v-border-color: #e4e7ed;
+// $v-bg-color: #f3f4f6;
+$v-bg-color: #f5f5f5;
+
+$v-type-primary: #4591ef;
+$v-type-primary-disabled: #a0cfff;
+$v-type-primary-dark: #2b85e4;
+$v-type-primary-light: #ecf5ff;
+$v-type-primary-deep-dark: #6149f6;
+
+$v-type-warning: #ff9900;
+$v-type-warning-disabled: #fcbd71;
+$v-type-warning-dark: #f29100;
+$v-type-warning-light: #fdf6ec;
+
+$v-type-success: #19be6b;
+$v-type-success-disabled: #71d5a1;
+$v-type-success-dark: #18b566;
+$v-type-success-light: #dbf1e1;
+
+$v-type-error: #fa3534;
+$v-type-error-disabled: #fab6b6;
+$v-type-error-dark: #dd6161;
+$v-type-error-light: #fef0f0;
+
+$v-type-info: #909399;
+$v-type-info-disabled: #c8c9cc;
+$v-type-info-dark: #82848a;
+$v-type-info-light: #f4f4f5;
+
+$v-type-money: #FFD700;
+$v-type-money-disabled: #ffea75;
+$v-type-money-dark: #ebd243;
+$v-type-money-light: #f5ebbc;
+
+$v-form-item-height: 70rpx;
+$v-form-item-border-color: #dcdfe6;

@@ -1,0 +1,16 @@
+<!-- components/yulin-submit-bar/yulin-submit-bar.wxml -->
+
+<yulin-submit-bar multiple safe-area="{{ _mix_isIphoneX }}">
+  <view slot="left">
+    {{ label }}<text class="v-font-xl v-font-bold v-type-error">￥{{ data_amount }}</text>
+    {{ suffixLabel }}
+  </view>
+  <view slot="right" class="v-flex v-flex-nowrap v-row-right">
+    <van-button wx:if="{{ cancelText }}" disabled="{{ disabled }}" round custom-style="height: 40px" custom-class="v-m-r-10 v-b-0" color="#909399" bind:click="onCancel">
+      {{ cancelText }}
+    </van-button>
+    <van-button wx:if="{{ submitText }}" disabled="{{ disabled }}" round custom-style="height: 40px" custom-class="v-b-0" color="#fa3534" bind:click="onSubmit">
+      {{ submitText }}
+    </van-button>
+  </view>
+</yulin-submit-bar>

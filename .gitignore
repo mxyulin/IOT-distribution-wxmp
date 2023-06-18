@@ -1,0 +1,19 @@
+# Windows
+[Dd]esktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+/static/images/banner
+/static/images/goods
+/static/images/test
+/static/videos
+/static/audios
+
+# macOS
+.DS_Store
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+# Node.js
+node_modules/

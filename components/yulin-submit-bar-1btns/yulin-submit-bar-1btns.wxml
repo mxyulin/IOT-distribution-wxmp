@@ -1,0 +1,17 @@
+<!--components/yulin-submit-bar-1btns/yulin-submit-bar-1btns.wxml-->
+<yulin-submit-bar safe-area="{{ _mix_isIphoneX }}">
+	<view class="v-p-l-30 v-p-r-30" style="width: 100%">
+		<van-button
+		 block
+		 round
+     icon="{{ icon }}"
+     class-prefix="{{ classPrefix }}"
+     disabled="{{ disabled }}"
+     loading="{{ loading }}"
+		 custom-class="v-primary-linear-button"
+		 bind:tap="onSubmit"
+		>
+			{{ submitText }}
+		</van-button>
+	</view>
+</yulin-submit-bar>

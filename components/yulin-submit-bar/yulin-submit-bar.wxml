@@ -1,0 +1,18 @@
+<!-- components/yulin-submit-bar/yulin-submit-bar.wxml -->
+<view class="container">
+  <!--  -->
+  <view wx:if="{{ !multiple }}" class="submit-bar v-flex v-flex-nowrap">
+    <slot></slot>
+  </view>
+  <view wx:else class="submit-bar v-flex v-flex-nowrap v-row-between" hover-class="none">
+    <!--  -->
+    <view class="v-flex-1 v-flex v-flex-nowrap v-row-left" style="height: 100%;">
+      <slot name="left"></slot>
+    </view>
+    <!--  -->
+    <view class="v-flex-1 v-flex v-flex-nowrap v-row-right" style="height: 100%;">
+      <slot name="right"></slot>
+    </view>
+  </view>
+  <view wx:if="{{ safeArea }}" class="submit-bar__safe"></view>
+</view>

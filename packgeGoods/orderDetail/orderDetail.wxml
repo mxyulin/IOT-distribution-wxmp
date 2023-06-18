@@ -1,0 +1,86 @@
+<!-- packgeGoods/orderDetail/orderDetail.wxml -->
+<view class="container v-m-b-50">
+  <!-- 订单状态 -->
+  <view class="order-status v-flex v-flex-nowrap v-row-between">
+    <view class="v-font-xl v-p-25 v-type-info-light">
+      <van-icon size="1em" class-prefix="iconfont alicon" name="time-circle"></van-icon>
+      待买家收货~
+    </view>
+    <view class="v-font-xl v-p-25 v-type-info-light">剩余：{{}}</view>
+  </view>
+  <!-- 商品信息 -->
+  <view class="goods-card v-m-t-20 v-p-20 v-flex v-flex-nowrap v-row-start">
+    <view class="goods-image">
+      <van-image width="100%" height="100%" fit="aspectFit" src="{{ goodsImg }}" />
+    </view>
+    <van-tag mark color="{{ _mix_themeColor }}" class="goods-tag">{{ goodsTag }}</van-tag>
+    <view class="goods-info v-p-l-20">
+      <view class="v-font-xs single-line-hidden v-main-color" style="width: 30%">
+        {{ goodsTitle }}
+      </view>
+      <view class="v-font-xs single-line-hidden v-type-info">{{ goodsDetail }}</view>
+      <view class="v-font-md v-flex v-row-between v-row-nowrap">
+        <text class="v-font-bold v-type-error">
+          ￥{{ goodsPrice }}
+        </text>
+        <text class="v-main-color">
+          x {{ goodsNum }}
+        </text>
+      </view>
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class="order-info">
+    <van-cell-group title="基本信息">
+      <van-cell title="订单编号" value="{{}}" />
+      <van-cell title="下单时间" value="{{}}" />
+      <van-cell title="支付方式" value="{{}}" />
+      <van-cell title="订单备注" value="{{}}" />
+    </van-cell-group>
+    <van-cell-group title="费用信息">
+      <van-cell title="订单金额" value="{{}}" />
+      <van-cell title="商品金额" value="{{}}" />
+      <!-- <van-cell title="优惠券" value="{{}}" /> -->
+      <van-cell title="运费" value="{{}}" />
+    </van-cell-group>
+    <view class="address-wrapper v-m-t-20 v-p-20 v-b-b-1 v-font-md v-flex v-flex-nowrap v-row-between" hover-class="none" hover-stop-propagation="{{false}}">
+      <view class="v-flex-col v-flex-wrap" hover-class="none" hover-stop-propagation="{{false}}">
+        <view class="v-main-color" selectable="{{false}}" space="{{false}}" decode="{{false}}">
+          收货人：{{"张三"}} {{"137*****4768"}}
+        </view>
+        <view class="v-m-t-10 single-line-hidden" hover-class="none" hover-stop-propagation="{{false}}">
+          江苏省 无锡市新吴区XXX路129号
+        </view>
+      </view>
+      <view class="v-font-30 v-type-primary" bind:tap="showPopup">
+        物流信息
+        <van-icon size="1em" name="arrow"></van-icon>
+      </view>
+    </view>
+  </view>
+  <!-- 操作按钮 -->
+  <view class="btns-wrapper">
+    <view class="btns-bar-top v-flex v-flex-nowrap v-row-between v-p-l-20 v-p-r-20" hover-class="none" >
+      <view class="v-flex-1">
+        总计：<text class="v-font-xl v-font-bold v-type-error">￥{{"123.00"}}</text>
+      </view>
+      <view class="v-flex-1 v-flex v-flex-nowrap v-row-right" style="height: 100%;">
+        <van-button round custom-style="height: 40px" custom-class="v-m-r-10 v-b-0" color="#909399" open-type="{{openType}}" bindtap="">
+          取消订单
+        </van-button>
+        <van-button round custom-style="height: 40px" custom-class="v-b-0" color="#fa3534" open-type="{{openType}}" bindtap="">
+          立即支付
+        </van-button>
+      </view>
+    </view>
+    <view wx:if="{{ isIphoneX }}" class="btns-bar__safe"></view>
+  </view>
+    
+    
+  <!-- 物流信息弹窗 -->
+  <view>
+    <van-popup show="{{ show }}" position="bottom" custom-style="height: 50%;" bind:close="onClose">
+      <van-steps steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="{{ _mix_themeColor }}" />
+    </van-popup>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--components/order-card/order-card.wxml-->
+
+<view class="order-card" style="height: {{ cardHeight }}" bind:tap="jumpToOrderDetail">
+  <!-- 购买人 -->
+  <view class="v-flex v-row-between v-flex-nowrap v-col-top v-p-20 v-border-b-1 v-font-xs" wx:if="{{ orderType == 'profit' }}">
+    <view class="" wx:if="{{ buyerName }}">买家：{{ buyerName }}</view>
+    <view class="" wx:if="{{ phone }}">手机号：{{ phone }}</view>
+  </view>
+  <!-- 商品信息 -->
+  <view class="goods-card v-flex v-flex-nowrap v-row-start v-border-b-1">
+    <view class="goods-image">
+      <van-image width="100%" height="100%" fit="aspectFit" src="{{ goodsImg }}" />
+    </view>
+    <van-tag mark color="{{ _mix_themeColor }}" class="goods-tag">{{ goodsTag }}</van-tag>
+    <view class="goods-info">
+      <view class="v-font-xs single-line-hidden v-main-color" style="width: 30%">{{ goodsTitle }}</view>
+      <view class="v-font-xs single-line-hidden v-type-info">{{ goodsDetail }}</view>
+      <view class="v-font-md v-flex v-row-between v-row-nowrap">
+        <text class="v-font-bold v-type-error"   >￥{{ goodsPrice }}</text>
+        <text class="v-main-color"   >x {{ goodsNum }}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class="v-p-t-10 v-p-l-20 v-p-r-20 v-flex v-flex-nowrap v-row-between v-col-bottom">
+    <view class="v-font-xs v-type-info">
+      <view class="">订单编号：{{ orderNum }}</view>
+      <view class="">下单时间：{{ orderTime }}</view>
+    </view>
+    <view wx:if="{{ orderType == 'profit' }}" class="v-font-sm v-main-color">分利金额：￥{{ profitAmount }}</view>
+    <view wx:elif="{{ orderType == 'goods' }}" class="v-font-sm v-main-color">支付金额：￥{{ goodsAmount }}</view>
+  </view>
+</view>

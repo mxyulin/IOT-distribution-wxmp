@@ -1,0 +1,224 @@
+.v-relative,
+.v-rela {
+	position: relative;
+}
+
+.v-absolute,
+.v-abso {
+	position: absolute;
+}
+
+image {
+	display: inline-block;
+}
+
+view,
+text {
+	box-sizing: border-box;
+}
+
+.v-font-xs {
+	font-size: 22rpx !important;
+}
+
+.v-font-sm {
+	font-size: 26rpx !important;
+}
+
+.v-font-md {
+	font-size: 28rpx !important;
+}
+
+.v-font-lg {
+	font-size: 30rpx !important;
+}
+
+.v-font-xl {
+	font-size: 34rpx !important;
+}
+
+// 2023年06月02日 14:50:14 添加字体粗细
+.v-font-bold {
+	font-weight: bold;
+}
+
+.v-font-bolder {
+	font-weight: bolder;
+}
+
+.v-font-lighter {
+	font-weight: lighter;
+}
+
+.v-font-normal {
+	font-weight: normal;
+}
+
+// 2023年06月02日 14:03:00 添加行内块布局
+.v-inblock {
+	display: inline-block !important;
+}
+
+// 2023年06月02日 14:52:26 添加块布局
+.v-block {
+	display: block !important;
+}
+
+// 2023年06月05日 14:55:03 添加单行文本溢出处理
+.single-line-hidden {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.v-flex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.v-flex-wrap {
+	flex-wrap: wrap;
+}
+
+.v-flex-nowrap {
+	flex-wrap: nowrap;
+}
+
+.v-col-center {
+	align-items: center;
+}
+
+.v-col-top {
+	align-items: flex-start;
+}
+
+.v-col-bottom {
+	align-items: flex-end;
+}
+
+.v-row-center {
+	justify-content: center;
+}
+
+.v-row-left {
+	justify-content: flex-start;
+}
+
+.v-row-right {
+	justify-content: flex-end;
+}
+
+.v-row-between {
+	justify-content: space-between;
+}
+
+.v-row-around {
+	justify-content: space-around;
+}
+
+.v-row-evenly {
+	justify-content: space-evenly;
+}
+
+.v-text-left {
+	text-align: left;
+}
+
+.v-text-center {
+	text-align: center;
+}
+
+.v-text-right {
+	text-align: right;
+}
+
+.v-flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+// 定义flex等分
+@for $i from 0 through 12 {
+	.v-flex-#{$i} {
+		flex: $i;
+	}
+}
+
+// 定义字体(px)单位，小于20都为px单位字体
+@for $i from 9 to 20 {
+	.v-font-#{$i} {
+		font-size: $i + px;
+	}
+}
+
+// 定义字体(rpx)单位，大于或等于20的都为rpx单位字体
+@for $i from 20 through 40 {
+	.v-font-#{$i} {
+		font-size: $i + rpx;
+	}
+}
+
+// 定义边框和(px)单位
+@for $i from 0 to 9 {
+	@if $i == 0 {
+		// 缩写语法，例如 v-bdr-r-1
+		.v-border-#{$i} {
+			border: none !important;
+		}
+
+		.v-b-#{$i} {
+			border: none !important;
+		}
+	}
+	@each $short, $long in l left, t top, r right, b bottom {
+		// 缩写语法，例如 v-bdr-r-1
+		.v-border-#{$short}-#{$i} {
+			border-#{$long}: #{$i}px solid #e4e7ed !important;
+		}
+
+		.v-b-#{$short}-#{$i} {
+			border-#{$long}: #{$i}px solid #e4e7ed !important;
+		}
+	}
+}
+
+// 定义内外边距，历遍1-80
+@for $i from 0 through 80 {
+	// 只要双数和能被5除尽的数
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		// 得出：v-margin-30或者v-m-30
+		.v-margin-#{$i}, .v-m-#{$i} {
+			margin: $i + rpx!important;
+		}
+		
+		// 得出：v-padding-30或者v-p-30
+		.v-padding-#{$i}, .v-p-#{$i} {
+			padding: $i + rpx!important;
+		}
+		
+		@each $short, $long in l left, t top, r right, b bottom {
+			// 缩写版，结果如： v-m-l-30
+			// 定义外边距
+			.v-m-#{$short}-#{$i} {
+				margin-#{$long}: $i + rpx!important;
+			}
+			
+			// 定义内边距
+			.v-p-#{$short}-#{$i} {
+				padding-#{$long}: $i + rpx!important;
+			}
+			
+			// 完整版，结果如：v-margin-left-30
+			// 定义外边距
+			.v-margin-#{$long}-#{$i} {
+				margin-#{$long}: $i + rpx!important;
+			}
+			
+			// 定义内边距
+			.v-padding-#{$long}-#{$i} {
+				padding-#{$long}: $i + rpx!important;
+			}
+		}
+	}
+}

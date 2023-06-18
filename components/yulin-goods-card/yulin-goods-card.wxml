@@ -1,0 +1,19 @@
+<!-- components/goodsCard/goodsCard.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="{{ false }}" bindtap="jumpToGoodsDetail">
+  <view class="image-wrapper v-p-5" hover-class="none" hover-stop-propagation="{{ false }}">
+    <van-image src="/static/images/test/300.jpg" width="100%" height="100%" radius="3" lazy-load></van-image>
+  </view>
+  <view class="v-p-l-20 v-p-r-20" hover-class="none" hover-stop-propagation="{{ false }}">
+    <view class="v-font-xl v-main-color single-line-hidden" style="height: 50rpx" hover-class="none" hover-stop-propagation="{{ false }}">
+      {{ title || '暂无商品名~'}}
+    </view>
+    <view class="v-font-md v-type-info single-line-hidden" hover-class="none" hover-stop-propagation="{{ false }}">
+      品牌：{{brandName}}
+    </view>
+    <view class="v-font-md v-type-info single-line-hidden" hover-class="none" hover-stop-propagation="{{ false }}">库存：{{stock}}</view>
+    <!-- 不要动价格标签这块的结构 -->
+    <view class="v-font-md" hover-class="none" hover-stop-propagation="{{ false }}">
+      ￥<text class="v-font-40 v-m-0" space="{{ false }}" decode="{{ false }}">{{ _priceInteger }}</text>.{{ _priceDecimals }}
+    </view>
+  </view>
+</view>

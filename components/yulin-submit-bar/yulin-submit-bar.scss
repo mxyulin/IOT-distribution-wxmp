@@ -1,0 +1,25 @@
+/* components/yulin-submit-bar/yulin-submit-bar.wxss */
+
+@import '../../static/styles/index.scss';
+
+.container {
+  padding-right: 20rpx;
+  padding-left: 20rpx;
+  width: 100%;
+  min-height: 50px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.submit-bar {
+  width: 100%;
+  height: 50px;
+}
+
+.submit-bar__safe {
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+}

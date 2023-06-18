@@ -1,0 +1,68 @@
+<!-- pages/goods-detail/goods-detail.wxml -->
+
+<view class="caontainer" hover-class="none">
+	<!-- 轮播图 -->
+	<swiper
+	 class="banner"
+	 indicator-dots
+	 indicator-color="rgba(0,0,0,.3)"
+	 autoplay
+	 current="0"
+	 current-item-id=""
+	 interval="5000"
+	 duration="1000"
+	 circular
+	 bindchange=""
+	 bindanimationfinish=""
+	>
+		<swiper-item
+		 wx:for="{{ images }}"
+		 wx:key="*this"
+		 class=""
+		 item-id=""
+		>
+			<van-image
+			 width="100%"
+			 height="100%"
+			 lazy-load
+			 src="{{ item }}"
+			/>
+		</swiper-item>
+	</swiper>
+	<!-- 商品详情 -->
+	<view class="" style="padding-bottom: {{ isIphoneX ? 84 : 50 }}px">
+		<view class="v-p-20 v-flex-col v-b-b-1" hover-class="none">
+			<view class="title v-font-40 v-font-bold v-main-color">{{ title }}</view>
+			<view class="v-type-info-dark">品牌：{{ brandName }}</view>
+			<view class="v-type-info-dark">型号：{{ models }}</view>
+			<view class="v-type-info-dark">规格：{{ skuName }}</view>
+			<view class="v-type-info-dark">说明：{{ summary }}</view>
+		</view>
+		<view class="v-p-20 v-flex-col v-b-b-1" hover-class="none">
+			<view class="v-type-info-dark">
+				库存：
+				<text class="v-main-color v-font-xl">{{ stock }}</text>
+			</view>
+			<view class="v-type-info-dark v-flex v-flex-nowrap v-row-between">
+				<text class="">
+          单价：<text class="v-main-color v-font-xl">￥{{ price }}</text>
+				</text>
+				<van-stepper
+				 integer
+				 button-size="30"
+				 theme="round"
+				 max="{{ 999 }}"
+				 value="{{ num }}"
+				 bind:change="onChange"
+				/>
+			</view>
+		</view>
+	</view>
+	<yulin-submit-bar-2btns
+	 amount="{{ amount }}"
+	 disabled="{{ disabled }}"
+	 submit-text="立即购买"
+	 bind:submit="subPreOrder"
+	/>
+</view>
+
