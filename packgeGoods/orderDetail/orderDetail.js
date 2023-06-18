@@ -8,7 +8,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        // themeColor: appInst.globalData.themeColor,
+        // 
+        amount: '123.00',
+        // 
         show: false,
         active: 2,
         steps: [

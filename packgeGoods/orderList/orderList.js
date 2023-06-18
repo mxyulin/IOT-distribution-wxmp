@@ -19,7 +19,7 @@ Page({
 
         this.setData({
             tabsSafeHeight: pageSafeHeight
-        })
+        });
     },
 
     /**

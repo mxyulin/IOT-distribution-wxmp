@@ -1,5 +1,5 @@
 <!-- packgeProfit/profitDetail/profitDetail.wxml -->
-<view class="container v-m-b-50">
+<view class="container">
   <!-- 订单状态 -->
   <view class="order-status v-flex v-flex-nowrap v-row-between">
     <view class="v-font-xl v-p-25 v-type-info-light">

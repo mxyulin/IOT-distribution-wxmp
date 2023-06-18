@@ -4,6 +4,7 @@
         "van-cell": "@vant/weapp/cell/index",
         "van-cell-group": "@vant/weapp/cell-group/index",
         "van-popup": "@vant/weapp/popup/index",
-        "van-steps": "@vant/weapp/steps/index"
+        "van-steps": "@vant/weapp/steps/index",
+        "yulin-submit-bar-2btns": "/components/yulin-submit-bar-2btns/yulin-submit-bar-2btns"
     }
 }

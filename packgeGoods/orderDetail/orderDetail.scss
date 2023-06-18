@@ -2,6 +2,10 @@
 
 @import '../../static/styles/theme.scss';
 
+.container {
+  padding-bottom: 50px;
+}
+
 .order-status {
   width: 100%;
   height: 100rpx;
@@ -34,22 +38,4 @@
   width: 100%;
   // height: 150rpx;
   background: #fff;
-}
-
-.btns-wrapper {
-  width: 100%;
-  height: auto;
-  background: #fff;
-  position: fixed;
-  bottom: 0;
-}
-
-.btns-bar-top {
-  width: 100%;
-  height: 50px;
-}
-
-.btns-bar__safe {
-  height: constant(safe-area-inset-bottom);
-  height: env(safe-area-inset-bottom);
 }

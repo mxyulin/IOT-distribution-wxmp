@@ -11,8 +11,8 @@
 		<van-tab title="全部({{3}})">
 			<view
 			 wx:if="{{ orderList['length'] }}"
-			 class="v-p-20 v-flex v-flex-wrap v-col-top"
-			 style="min-height: {{ canUseHeight }}"
+			 class="v-p-20 v-flex-col v-row-left"
+			 style="min-height: {{ tabsSafeHeight }}"
 			 hover-class="none"
 			>
 				<yulin-order-card orderType="goods" wx:for="{{ orderList }}" wx:key="*this" />
@@ -24,8 +24,8 @@
 		<van-tab title="待付款({{0}})">
 			<view
 			 wx:if="{{ false }}"
-			 class="v-p-20 v-flex v-flex-wrap v-col-top"
-			 style="min-height: {{ canUseHeight }}"
+			 class="v-p-20 v-flex-col v-row-left"
+			 style="min-height: {{ tabsSafeHeight }}"
 			 hover-class="none"
 			>
 				<yulin-order-card orderType="goods" wx:for="{{ orderList }}" wx:key="*this" />
@@ -37,8 +37,8 @@
 		<van-tab title="待发货({{3}})">
 			<view
 			 wx:if="{{ orderList['length'] }}"
-			 class="v-p-20 v-flex v-flex-wrap v-col-top"
-			 style="min-height: {{ canUseHeight }}"
+			 class="v-p-20 v-flex-col v-row-left"
+			 style="min-height: {{ tabsSafeHeight }}"
 			 hover-class="none"
 			>
 				<yulin-order-card orderType="goods" wx:for="{{ orderList }}" wx:key="*this" />
@@ -50,8 +50,8 @@
 		<van-tab title="待收货({{3}})">
 			<view
 			 wx:if="{{ orderList['length'] }}"
-			 class="v-p-20 v-flex v-flex-wrap v-col-top"
-			 style="min-height: {{ canUseHeight }}"
+			 class="v-p-20 v-flex-col v-row-left"
+			 style="min-height: {{ tabsSafeHeight }}"
 			 hover-class="none"
 			>
 				<yulin-order-card orderType="goods" wx:for="{{ orderList }}" wx:key="*this" />
