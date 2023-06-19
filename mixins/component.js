@@ -1,6 +1,6 @@
+// ! 全局禁止使用 lifetimes
 export default [
   {
-
     /**
      * 组件的属性列表
      */
@@ -12,7 +12,7 @@ export default [
     data: {
       _mix_author: 'yulin',
       _mix_themeColor: '#4591ef',
-      _mix_isIphoneX: false
+      _mix_isIphoneX: false,
     },
 
     /**
@@ -32,6 +32,7 @@ export default [
 
     // 在组件实例进入页面节点树时执行
     attached: function () {
+      // console.log('mix-组件', this.properties)
       const appInst = getApp();
 
       let isIphoneX = appInst.globalData.systemInfo.model.indexOf('iPhone X') >= 0 ? true : false;
@@ -45,12 +46,5 @@ export default [
     // 在组件实例被从页面节点树移除时执行
     detached: function () {
     },
-
-    /**
-     * 组件生命周期
-    */
-    // lifetimes: {
-
-    // }
   }
 ]

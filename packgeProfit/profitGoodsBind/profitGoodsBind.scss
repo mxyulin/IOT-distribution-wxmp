@@ -1,1 +1,24 @@
 /* packgeProfit/profitGoodsBind/profitGoodsBind.wxss */
+
+@import '../../static/styles/theme.scss';
+
+.goods-info {
+  margin: 30rpx 30rpx 0 30rpx;
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  -webkit-border-radius: 15rpx;
+  -moz-border-radius: 15rpx;
+  -ms-border-radius: 15rpx;
+  -o-border-radius: 15rpx;
+}
+
+.bg-primary {
+  border: none;
+  border-radius: 5rpx;
+  background: $v-type-primary-disabled;
+  -webkit-border-radius: 5rpx;
+  -moz-border-radius: 5rpx;
+  -ms-border-radius: 5rpx;
+  -o-border-radius: 5rpx;
+}

@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        checked: false
     },
 
     /**
@@ -64,7 +64,7 @@ Page({
 
     },
 
-    // 
+    // 提交表单
     onSubmit() {
         wx.showLoading({
             mask: true
@@ -81,5 +81,14 @@ Page({
             })
 
         }, 3000)
+    },
+
+    // 同意协议
+    onChange(e) {
+        let value = e.detail;
+
+        this.setData({
+            checked: value
+        })
     }
 })

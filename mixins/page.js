@@ -5,7 +5,7 @@ export default [
       _author: 'yulin',
       _mix_themeColor: '#4591ef',//主题色
       _mix_pageSafeHeight: '',// 单位 px
-      isIphoneX: false
+      _mix_isIphoneX: false
     },
 
     /**
@@ -19,7 +19,7 @@ export default [
       // debugger;
 
       this.setData({
-        isIphoneX: isIphoneX,
+        _mix_isIphoneX: isIphoneX,
         _mix_pageSafeHeight: h
       })
     },
@@ -45,7 +45,7 @@ export default [
 
     //   if (isTabbar()) {
     //   debugger;
-    //   let tabbarHeight = this.data.isIphoneX ? 80 : 70;// 
+    //   let tabbarHeight = this.data._mix_isIphoneX ? 80 : 70;// 
     //     return (safeHeight - tabbarHeight);
     //   }
 

@@ -2,6 +2,34 @@ import { checkType, deepClone } from '@/utils/tools';
 import componentMixins from './component';
 import pageMixins from './page';
 
+
+/* 参与合并的配置项 */
+const originProp = ['data', 'options', 'properties', 'methods'];// 源属性，可根据需求扩充其他属性
+const originHooks = [
+  // page hooks
+  'onLoad',
+  'onShow',
+  'onReady',
+  'onHide',
+  'onUnload',
+  'onRouteDone',
+  'onPullDownRefresh',
+  'onReachBottom',
+  'onShareAppMessage',
+  'onShareTimeline',
+  'onAddToFavorites',
+  'onPageScroll',
+  'onResize',
+  'onTabItemTap',
+  'onSaveExitState',
+  // component hooks
+  'created',
+  'attached',
+  'ready',
+  'moved',
+  'detached',
+];// 源 hooks
+
 /**
  * 劫持 Page, Component 改造 options
  * @param {Function} apiFunc Page, Component
@@ -33,32 +61,6 @@ export default function (apiFunc) {
  */
 function merge(mixins, options) {
   // debugger;
-  const originProp = ['data', 'options', 'properties', 'methods'];// 源属性，可根据需求扩充其他属性
-  const originHooks = [
-    // page hooks
-    'onLoad',
-    'onShow',
-    'onReady',
-    'onHide',
-    'onUnload',
-    'onRouteDone',
-    'onPullDownRefresh',
-    'onReachBottom',
-    'onShareAppMessage',
-    'onShareTimeline',
-    'onAddToFavorites',
-    'onPageScroll',
-    'onResize',
-    'onTabItemTap',
-    'onSaveExitState',
-    // component hooks
-    'created',
-    'attached',
-    'ready',
-    'moved',
-    'detached',
-  ];// 源 hooks
-
   mixins.forEach(mixin => {
     // 类型验证
     if (!checkType(mixin, 'object')) {
@@ -110,6 +112,16 @@ function merge(mixins, options) {
       }
     }
   });
-  
+
   return options;
+
+  // 合并生命周期
+  // function mergeHooks(key) {
+  //   const originHook = options[key];// 缓存原本的 hooks
+
+  //   return function (...args) {
+  //     val.call(this, ...args);// 先执行 mixins 中的 hook
+  //     originHook && originHook.call(this, ...args);// 再执行 originHook
+  //   }
+  // }
 }

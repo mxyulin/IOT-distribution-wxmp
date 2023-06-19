@@ -30,7 +30,7 @@
 		</swiper-item>
 	</swiper>
 	<!-- 商品详情 -->
-	<view class="" style="padding-bottom: {{ isIphoneX ? 84 : 50 }}px">
+	<view class="" style="padding-bottom: {{ _mix_isIphoneX ? 84 : 50 }}px">
 		<view class="v-p-20 v-flex-col v-b-b-1" hover-class="none">
 			<view class="title v-font-40 v-font-bold v-main-color">{{ title }}</view>
 			<view class="v-type-info-dark">品牌：{{ brandName }}</view>

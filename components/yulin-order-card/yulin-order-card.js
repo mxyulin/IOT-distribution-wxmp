@@ -150,27 +150,25 @@ Component({
     /**
      * 组件生命周期
     */
-    lifetimes: {
-        attached() {
-            // debugger;
-            let orderType = this.properties.orderType;
+    attached() {
+        // debugger;
+        let orderType = this.properties.orderType;
 
-            switch (orderType) {
-                case 'goods':
-                    this.setData({
-                        cardHeight: '220rpx'
-                    })
-                    break;
+        switch (orderType) {
+            case 'goods':
+                this.setData({
+                    cardHeight: '220rpx'
+                })
+                break;
 
-                case 'profit':
-                    this.setData({
-                        cardHeight: '300rpx'
-                    })
-                    break;
+            case 'profit':
+                this.setData({
+                    cardHeight: '300rpx'
+                })
+                break;
 
-                default:
-                    break;
-            }
+            default:
+                break;
         }
     },
 

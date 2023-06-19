@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.goods-info, .profit-info, .tags {
+.goods-info, .profit-info, .tags, .discount-info {
   width: 100%;
   background: #fff;
 }
@@ -22,9 +22,9 @@
 }
 
 .status-light {
-  width: 200rpx;
-  height: 200rpx;
-  line-height: 200rpx;
+  width: 150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
   border: none;
   border-radius: 100rpx;
   -webkit-border-radius: 100rpx;

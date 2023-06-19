@@ -9,7 +9,8 @@ Page({
      */
     data: {
         qrcode: null,
-        type: '贵重'// 贵重 & 普通
+        type: '贵重',// 贵重 & 普通
+        isBind: false,// 测试数据
     },
 
     /**
@@ -97,8 +98,7 @@ Page({
             })
     },
 
-    goodsBind() {
-        return;
+    qrcodeBind() {
         let qrcode = this.data.qrcode;
 
         // ! 含测试演示代码

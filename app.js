@@ -19,25 +19,6 @@ App({
         ////wx.hideTabBar();//隐藏系统tabbar
     },
 
-    // // 提示信息
-    // showMessage(msg) {
-    //     wx.showToast({
-    //         title: msg,
-    //         icon: 'none',
-    //         duration: 1000,
-    //         mask: true
-    //     })
-    // },
-    // 获取鉴权码 有效期5分钟
-    // getAuthCode() {
-    //     wx.login({
-    //         success: (res) => {
-    //             // debugger;
-    //             wx.setStorageSync('authCode', res.code);
-    //         },
-    //     })
-    // },
-
     getSystemInfo() {
         wx.getSystemInfo({
             success: (res) => {
@@ -45,20 +26,6 @@ App({
             }
         });
     },
-
-    // getPageCanuseHeight() {
-    //     let screenheight = this.globalData.systemInfo.screenHeight;
-    //     let statusBarHeight = this.globalData.systemInfo.statusBarHeight;
-
-    //     if (isTabbar) {
-    //         let tabbarHeight = this.isIphoneX() ? 57 : 44;
-    //         return (screenheight - statusBarHeight - tabbarHeight);
-    //     }
-
-    //     else {
-    //         return (screenheight - statusBarHeight);
-    //     }
-    // },
 
     globalData: {
         systemInfo: null,//客户端设备信息
