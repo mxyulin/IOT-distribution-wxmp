@@ -90,5 +90,45 @@ Page({
         this.setData({
             checked: value
         })
+    },
+
+    // 提交
+    onSubmit() {
+        if (!this.data.checked) {
+            return this.showMessage('请同意协议~')
+        }
+
+        wx.showLoading({
+            mask: true
+        })
+
+        let timer = setTimeout(() => {
+            wx.hideLoading();
+
+            wx.showModal({
+                title: '绑定结果',
+                content: '您已成功绑定~',
+                confirmText: '返回首页',
+                // content: '支付未完成~',
+                showCancel: false,
+                success: (res) => {
+                    if (res.confirm) {
+                        clearTimeout(timer);
+
+                        wx.switchTab({
+                            url: '/pages/index/index'
+                        })
+                    }
+                }
+            })
+
+        }, 3000)
+    },
+
+    // 返回
+    onCancel() {
+        wx.navigateBack({
+          delta: 0,
+        })
     }
 })

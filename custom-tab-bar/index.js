@@ -55,9 +55,9 @@ Component({
                 success(res) {
                     let code = res.result;
 
-                    debugger
+                    // debugger
                     if (code) {
-                        wx.navigateTo({
+                        wx.reLaunch({
                             url: `/packgeProfit/profitSancode/profitSancode?code=${code}`,
                         })
                     }

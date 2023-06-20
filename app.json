@@ -19,7 +19,8 @@
                 "setting/setting",
                 "userInfo/userInfo",
                 "editAddress/editAddress",
-                "selectAddress/selectAddress"
+                "selectAddress/selectAddress",
+                "goodsBindList/goodsBindList"
             ]
         },
         {

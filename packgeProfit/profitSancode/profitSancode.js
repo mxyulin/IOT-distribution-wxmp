@@ -132,7 +132,7 @@ Page({
         }
 
         else {
-            wx.redirectTo({
+            wx.navigateTo({
                 url: '/packgeProfit/profitGoodsBind/profitGoodsBind',
                 success: res => {
                 }

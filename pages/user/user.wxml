@@ -67,11 +67,11 @@
   <!-- 我的认主 -->
   <view class="box-wrapper v-m-t-30 v-p-30" hover-class="none" >
     <view class="v-flex v-flex-nowrap v-row-between v-m-b-35" hover-class="none" >
-      <text class="v-font-xl v-font-bold v-main-color"   >我的认主</text>
+      <text class="v-font-xl v-font-bold v-main-color">我的认主</text>
       <!-- <view class="v-font-xl v-type-info" hover-class="none" >全部<van-icon name="arrow" /></view> -->
     </view>
     <van-grid border="{{false}}">
-      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-prefix="iconfont alicon" icon="goods" text="商品信息" url=""/>
+      <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon-prefix="iconfont alicon" icon="goods" text="商品信息" url="/packgeUser/goodsBindList/goodsBindList"/>
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="upgrade" text="上传收款码" /> -->
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="qr" text="我的二维码" /> -->
       <!-- <van-grid-item content-class="v-m-0 v-p-0" text-class="v-font-md" icon="location-o" text="管理地址" /> -->

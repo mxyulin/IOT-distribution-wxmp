@@ -1,26 +1,18 @@
-// packgeProfit/profitList/profitList.js
-
-const appInst = getApp();
-
+// packgeUser/goodsBindList/goodsBindList.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        orderList: [{}, {}],
-        tabsSafeHeight: ''
+
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        let pageSafeHeight = (this.data._mix_pageSafeHeight - 44) + 'px';
 
-        this.setData({
-            tabsSafeHeight: pageSafeHeight
-        });
     },
 
     /**
